@@ -1,0 +1,452 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+}
+
+.min-h-screen {
+    min-height: 100vh;
+}
+
+.h-screen {
+    height: 100vh;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.inset-0 {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #9333ea 0%, #2563eb 50%, #3730a3 100%);
+}
+
+.hero-bg {
+    opacity: 0.3;
+}
+
+.hero-bg-element {
+    position: absolute;
+    width: 288px;
+    height: 288px;
+    border-radius: 50%;
+    mix-blend-mode: multiply;
+    filter: blur(40px);
+    animation: pulse 2s infinite;
+}
+
+.hero-bg-element:nth-child(1) {
+    top: 25%;
+    left: 25%;
+    background: white;
+}
+
+.hero-bg-element:nth-child(2) {
+    top: 33%;
+    right: 25%;
+    background: #fbb6ce;
+    animation-delay: 1s;
+}
+
+.hero-bg-element:nth-child(3) {
+    bottom: 25%;
+    left: 33%;
+    background: #93c5fd;
+    animation-delay: 2s;
+}
+
+.hero-content {
+    z-index: 10;
+    transition: all 1s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.hero-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero-title {
+    font-size: 6rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1rem;
+    letter-spacing: -0.025em;
+    background: linear-gradient(to right, white, #f3f4f6, white);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 25px 25px rgba(0, 0, 0, 0.15));
+}
+
+.hero-divider {
+    height: 4px;
+    width: 128px;
+    background: linear-gradient(to right, transparent, white, transparent);
+    margin: 0 auto;
+    opacity: 0.6;
+}
+
+.scroll-arrow {
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease;
+}
+
+.scroll-button {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    animation: bounce 2s infinite;
+}
+
+.scroll-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.scroll-button svg {
+    width: 32px;
+    height: 32px;
+    stroke: white;
+    stroke-width: 2;
+    fill: none;
+    transition: transform 0.3s ease;
+}
+
+.scroll-button:hover svg {
+    transform: translateY(4px);
+}
+
+.scroll-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.875rem;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+/* Content Section */
+.content-section {
+    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+    padding: 0 1rem;
+}
+
+.content-container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.content-title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 2rem;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.content-card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(4px);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+.content-card:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+    transform: translateY(-8px);
+}
+
+.content-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.content-card p {
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.content-scroll-arrow {
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.content-scroll-button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid rgba(156, 163, 175, 0.5);
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.content-scroll-button:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
+.content-scroll-button svg {
+    width: 24px;
+    height: 24px;
+    stroke: #4b5563;
+    stroke-width: 2;
+    fill: none;
+    transition: transform 0.3s ease;
+}
+
+.content-scroll-button:hover svg {
+    transform: translateY(4px);
+}
+
+/* Projects Section */
+.projects-section {
+    background: linear-gradient(135deg, #0f172a 0%, #581c87 50%, #0f172a 100%);
+    padding: 4rem 1rem;
+}
+
+.projects-container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.projects-title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.projects-divider {
+    height: 4px;
+    width: 128px;
+    background: linear-gradient(to right, transparent, #a855f7, transparent);
+    margin: 0 auto 4rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.project-image {
+    height: 192px;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.05);
+}
+
+.project-image-1 {
+    background: linear-gradient(to right, #8b5cf6, #ec4899);
+}
+
+.project-image-2 {
+    background: linear-gradient(to right, #3b82f6, #06b6d4);
+}
+
+.project-image-3 {
+    background: linear-gradient(to right, #10b981, #14b8a6);
+}
+
+.project-number {
+    color: white;
+    font-size: 2.25rem;
+    font-weight: bold;
+}
+
+.project-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.project-description {
+    color: #d1d5db;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.project-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.project-tag {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+}
+
+.tag-purple {
+    background: rgba(139, 92, 246, 0.3);
+    color: #ddd6fe;
+}
+
+.tag-blue {
+    background: rgba(59, 130, 246, 0.3);
+    color: #dbeafe;
+}
+
+.tag-orange {
+    background: rgba(249, 115, 22, 0.3);
+    color: #fed7aa;
+}
+
+.tag-green {
+    background: rgba(16, 185, 129, 0.3);
+    color: #a7f3d0;
+}
+
+.tag-yellow {
+    background: rgba(245, 158, 11, 0.3);
+    color: #fef3c7;
+}
+
+.tag-red {
+    background: rgba(239, 68, 68, 0.3);
+    color: #fecaca;
+}
+
+/* Animations */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .content-title,
+    .projects-title {
+        font-size: 2.5rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .content-title,
+    .projects-title {
+        font-size: 2rem;
+    }
+}
